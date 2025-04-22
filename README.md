@@ -85,7 +85,7 @@ FROM prescriptions;
 •	Issue handled: Cleaned and mapped medication names for consistent grouping.
 
 
-### Analysis Results
+## Analysis Results
 #### Question 1 (a)
 What is the distribution of patients across age groups?
 SQL Code
@@ -244,7 +244,7 @@ JOIN prescription_counts p ON a.patient_id = p.patient_id
 A correlation between appointment and prescription frequencies may indicate whether higher patient engagement results in more active treatment or monitoring.
 
 
-### Business Insights
+## Business Insights
 #### Insight 1
 Finding: The majority of patients fall in the 70+ age group, indicating high engagement from senior patients.
 
