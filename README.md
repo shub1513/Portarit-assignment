@@ -1,4 +1,4 @@
-# Healthcare Analytics Assignment - 
+# Healthcare Analytics Assignment
 ## Part 1: Data Pipeline Documentation
 ### 1. Setup Overview
 The pipeline was built using Docker, Python, and PostgreSQL. SQL transformations were performed using DBeaver.
