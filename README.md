@@ -29,7 +29,7 @@ Instead of modifying the original tables using ALTER TABLE, transformed versions
 Description: Added age_group and patient_type for better segmentation.
 SQL Code:
 
-<pre> ```sql CREATE TABLE patients_transformed AS SELECT * , CASE WHEN age BETWEEN 0 AND 18 THEN '0-18' WHEN age BETWEEN 19 AND 30 THEN '19-30' WHEN age BETWEEN 31 AND 50 THEN '31-50' WHEN age BETWEEN 51 AND 70 THEN '51-70' WHEN age IS NULL THEN 'Not Available' ELSE '70+' END AS age_group, CASE WHEN registration_date::date >= NOW()::date - INTERVAL '6 months' THEN 'New' WHEN registration_date::date >= NOW()::date - INTERVAL '24 months' THEN 'Regular' ELSE 'Long-term' END AS patient_type FROM patients; ``` </pre>
+<pre> sql CREATE TABLE patients_transformed AS SELECT * , CASE WHEN age BETWEEN 0 AND 18 THEN '0-18' WHEN age BETWEEN 19 AND 30 THEN '19-30' WHEN age BETWEEN 31 AND 50 THEN '31-50' WHEN age BETWEEN 51 AND 70 THEN '51-70' WHEN age IS NULL THEN 'Not Available' ELSE '70+' END AS age_group, CASE WHEN registration_date::date >= NOW()::date - INTERVAL '6 months' THEN 'New' WHEN registration_date::date >= NOW()::date - INTERVAL '24 months' THEN 'Regular' ELSE 'Long-term' END AS patient_type FROM patients; </pre>
 
 •	Issue handled: Missing ages were tagged as 'Not Available'.
 #### b. appointments_transformed
