@@ -92,17 +92,18 @@ SQL Code
 
 <pre> SELECT * FROM patients_transformed; </pre>
 
-Result Table Screenshot (Partial)
+##### Result Table Screenshot (Partial)
+
 ![Screenshot 2025-04-22 100256](https://github.com/user-attachments/assets/2a05a5d3-0960-4f06-81c1-5e80bf310041)
 
  
-Chart Screenshot
+##### Chart Screenshot
 
 ![Screenshot 2025-04-22 100440](https://github.com/user-attachments/assets/7c2cf62f-386c-4524-b556-d13f9e5ba287)
 
 
  
-Interpretation:
+##### Interpretation:
 The distribution helps identify which age groups are more actively engaging with the healthcare system. This insight can guide age-specific outreach or resource planning.
 
 
@@ -115,16 +116,17 @@ FROM patients_transformed AS T1
 JOIN appointments_transformed AS T2 ON T1.patient_id = T2.patient_id 
 GROUP BY 1;
 </pre>
-Result Table Screenshot
+
+##### Result Table Screenshot
 
  ![Screenshot 2025-04-22 100833](https://github.com/user-attachments/assets/2303f407-9a42-43fa-ac0f-abde99178440)
 
-Chart Screenshot
+##### Chart Screenshot
 
  ![Screenshot 2025-04-22 100906](https://github.com/user-attachments/assets/7a6151dc-e964-457b-8b2e-573307433d46)
 
 
-Interpretation:
+##### Interpretation:
 New or long-term patients may have different appointment frequencies, which can inform strategies to improve engagement or retention.
 
 #### Question 2 (a)
@@ -137,15 +139,18 @@ JOIN appointments_transformed AS T2 ON T1.patient_id = T2.patient_id
 GROUP BY 1,2 
 ORDER BY 1 ;
 </pre>
-Result Table Screenshot
+
+##### Result Table Screenshot
+
 ![Screenshot 2025-04-22 101044](https://github.com/user-attachments/assets/47c56e60-59ef-4111-a2d3-e5b62aa2100a)
 
  
-Chart Screenshot
+##### Chart Screenshot
+
 ![Screenshot 2025-04-22 101109](https://github.com/user-attachments/assets/b573a677-025e-45d4-8d8a-38c8054d6fad)
 
  
-Interpretation:
+##### Interpretation:
 Understanding popular appointment types by age group allows providers to tailor services for specific demographics, enhancing patient satisfaction and care efficiency.
 
 #### Question 2 (b)
@@ -159,16 +164,18 @@ WHERE appointment_type = 'Emergency'
 GROUP BY 1 
 ORDER BY 2 DESC ;
 </pre>
-Result Table Screenshot
+
+##### Result Table Screenshot
 
 ![Screenshot 2025-04-22 102205](https://github.com/user-attachments/assets/8211d9d6-cff5-4404-853b-c86088e336ac)
  
 
-Chart Screenshot
+##### Chart Screenshot
+
 ![Screenshot 2025-04-22 102228](https://github.com/user-attachments/assets/273ea88a-ce8d-460f-b637-bedcaa22934b)
 
  
-Interpretation:
+##### Interpretation:
 Analyzing emergency visit patterns by weekday helps identify operational stress points, enabling better scheduling and resource allocation.
 
 
@@ -182,14 +189,15 @@ JOIN patients_transformed AS T2 ON T1.patient_id = T2.patient_id
 GROUP BY 1,2 
 ORDER BY 1 ;
 </pre>
-Result Table Screenshot (Partial)
+
+##### Result Table Screenshot (Partial)
  ![Screenshot 2025-04-22 102406](https://github.com/user-attachments/assets/3642984c-9431-4553-9f49-0f842671513f)
 
-Chart Screenshot
+##### Chart Screenshot
 ![Screenshot 2025-04-22 102438](https://github.com/user-attachments/assets/6991d7ea-8ff0-4b5b-8f1e-790b8f80dbd2)
  
 
-Interpretation:
+##### Interpretation:
 Identifying medication categories prescribed most by age group assists in inventory planning, preventive care initiatives, and chronic disease management.
 
 
@@ -219,18 +227,20 @@ FROM appointment_counts a
 JOIN prescription_counts p ON a.patient_id = p.patient_id 
 ;
 </pre>
-Result Table Screenshot (Partial)
+
+##### Result Table Screenshot (Partial)
+
 ![Screenshot 2025-04-22 102714](https://github.com/user-attachments/assets/05c2642d-4356-42d6-890a-541512bb4f3f)
  
 
-Chart Screenshot
+##### Chart Screenshot
  
 ![Screenshot 2025-04-22 102806](https://github.com/user-attachments/assets/781114a6-438b-4152-ae0c-e709b4082c25)
 
 ![Screenshot 2025-04-22 102825](https://github.com/user-attachments/assets/5b04b33f-83fd-4f90-b4a2-2ca14ad77d6a)
 
 
-Interpretation:
+##### Interpretation:
 A correlation between appointment and prescription frequencies may indicate whether higher patient engagement results in more active treatment or monitoring.
 
 
