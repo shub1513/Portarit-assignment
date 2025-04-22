@@ -237,19 +237,25 @@ A correlation between appointment and prescription frequencies may indicate whet
 ### Business Insights
 #### Insight 1
 Finding: The majority of patients fall in the 70+ age group, indicating high engagement from senior patients.
+
 Suggestion: Enhance preventive and wellness programs tailored for seniors (70+ age group).
 #### Insight 2
 Finding: Emergency visits peak on Friday with 9 visits.
+
 Suggestion: Bolster staffing and introduce end of week tele triage support to smooth Friday surges.
 #### Insight 3
 Finding: Regular patients (6–24 months since registration) have the highest appointment count (56), ahead of long term (45) and new patients (4).
+
 Suggestion: Investigate which touchpoints drive strong engagement in this group and replicate them for new and long term cohorts.
 #### Insight 4
 Finding: Heart medications are the top prescription category for older age groups (24 for 70+, 20 for 51–70).
+
 Suggestion: Review cardiovascular drug inventory and patient education to ensure adherence and supply continuity.
 #### Insight 5
 Finding: Patients with more appointments also receive more prescriptions, suggesting comprehensive care but raising overtreatment questions.
+
 Suggestion: Perform an outcome analysis to confirm whether higher visit to prescription ratios improve health metrics or signal unnecessary prescribing.
 #### Insight 6
 Finding: Among the 51+ cohort, Checkup is the most common appointment type, reflecting a preventive care focus
+
 Suggestion: Expand proactive screening and chronic disease management initiatives to leverage this preventive mindset.
