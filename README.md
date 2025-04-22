@@ -1,6 +1,6 @@
 # Healthcare Analytics Assignment - 
-Part 1: Data Pipeline Documentation
-1. Setup Overview
+## Part 1: Data Pipeline Documentation
+### 1. Setup Overview
 The pipeline was built using Docker, Python, and PostgreSQL. SQL transformations were performed using DBeaver.
 Approach A: Docker + PowerShell
 - Cloned the repo and navigated using PowerShell
@@ -15,17 +15,17 @@ Approach B: DBeaver (GUI)
   Username/Password: postgres
 - Verified that tables were loaded properly
 - Performed transformations using SQL Editor
-2. Data Quality Checks
+### 2. Data Quality Checks
 - Handled missing ages in patients by assigning 'Not Available' group
 - Ensured appointment dates were valid and calculated time gaps between appointments
 - Standardized prescription categories by medication name
 - Verified provider IDs for consistency
-3. Design Decision: Non-Destructive Transformations
+### 3. Design Decision: Non-Destructive Transformations
 Instead of modifying the original tables using ALTER TABLE, transformed versions of the tables were created. This modular approach supports clean rollbacks and aligns with best practices in production systems.
 
 
-4. Data Transformations
-a. patients_transformed
+### 4. Data Transformations
+#### a. patients_transformed
 Description: Added age_group and patient_type for better segmentation.
 SQL Code:
 
@@ -47,7 +47,7 @@ END AS patient_type
 FROM patients;
 
 •	Issue handled: Missing ages were tagged as 'Not Available'.
-b. appointments_transformed
+#### b. appointments_transformed
 Description: Added day_of_week and time gap from last appointment.
 SQL Code:
 
@@ -59,7 +59,7 @@ to_char(appointment_date::date,'Day') AS day_of_week,
 FROM appointments;
 
 •	Issue handled: Handled NULLs using LAG for first appointments.
-c. prescriptions_transformed
+#### c. prescriptions_transformed
 Description: Standardized medication categories and calculated prescription frequency.
 SQL Code:
 
@@ -99,8 +99,8 @@ FROM prescriptions;
 
 
 
-Analysis Results
-Question 1 (a)
+### Analysis Results
+#### Question 1 (a)
 What is the distribution of patients across age groups?
 SQL Code
 
@@ -109,6 +109,9 @@ SELECT * FROM patients_transformed;
 Result Table Screenshot (Partial)
  
 Chart Screenshot
+
+![Screenshot 2025-04-22 100440](https://github.com/user-attachments/assets/7c2cf62f-386c-4524-b556-d13f9e5ba287)
+
 
  
 Interpretation:
