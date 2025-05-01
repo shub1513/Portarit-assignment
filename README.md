@@ -7,7 +7,8 @@ Approach A: Docker + PowerShell
 - Installed Docker, Python, and dependencies
 - Started the PostgreSQL container using `docker-compose up -d`
 - Loaded the dataset using `python load_data.py`
-Approach B: DBeaver (GUI)
+
+### Approach B: DBeaver (GUI)
 - Connected to PostgreSQL using DBeaver GUI
 - Setup connection using Docker host settings:
   Host: localhost
